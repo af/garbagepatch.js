@@ -1,6 +1,16 @@
 (function() {
     "use strict";
-    var LIB_NAMES = ['jQuery', '$', 'Backbone', '_', 'YUI', 'FB', 'twttr'];
+    // Common library names. If we see these names on the page, we *guess* that
+    // the variable is pointing to a library:
+    var LIB_NAMES = ['jQuery', '$', '$$', 'YUI',            // DOM libs
+                     'FB', 'twttr', 'goog',                 // Social services
+                     'Modernizr', 'Cufon', 'Raphael',
+                     'Backbone', '_', 'Ember', 'io',
+                     'Handlebars', 'Mustache',
+                     'swfobject', '_V_', 'VideoJS',
+                     'StyleFix', 'PrefixFree',              // PrefixFree
+                     '_gaq', '_gat', 'gaGlobal'             // Google analytics
+    ];
     var globals = { browser: [],
                     libs: [],
                     app: [] };
