@@ -42,10 +42,18 @@
             else globals.app.push(name);
         });
 
-        var template = 'browser ({browser.length}): {browser}<br />' +
+        var template = '<b>Global variables on this page:</b><br />' +
+                       'browser ({browser.length}): {browser}<br />' +
                        'libvars ({libs.length}): {libs}<br />' +
                        'appvars ({app.length}): {app}';
-        document.write(_template(template, globals));
+
+        // Display the results in a div at the top of the page:
+        var myDiv = document.createElement('div');
+        myDiv.innerHTML = _template(template, globals);
+        myDiv.style.cssText = 'position:fixed; top:10px; right:10px; opacity:0.9; z-index:1500; max-width:90%; padding:10px;' +
+                              'background:#eee; cursor:pointer; font:14px monospace; color:#333; text-align:left; word-wrap:break-word';
+        document.body.appendChild(myDiv);
+        myDiv.addEventListener('click', function() { myDiv.parentNode.removeChild(myDiv); });
     }
 
     testOutput();
