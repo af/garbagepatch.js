@@ -6,17 +6,22 @@ already pretty interesting to check your sites' impact on the global environment
 and for deducing what libraries other sites are using.
 
 
+## Using it
+
+#. Copy the contents of `bookmarklet.js` into the URL field of a new browser bookmark.
+#. Click on the bookmark when you're on a page you want to inspect.
+
 ## Building it
 
 You'll need node.js and uglify-js to run the build script:
 
     # With node.js installed:
     npm install -g uglify-js
-    node build.js       # Copy the output and save it as a bookmark in your browser
+    ./build.js       # This will save the new build as bookmarklet.js
 
 
 ## TODO
 
-* Add more popular libraries
+* Detect more popular libraries
 * Better output styling
 * Add a way to interact with the detected global variables
