@@ -8,8 +8,8 @@ and for deducing what libraries other sites are using.
 
 ## Using it
 
-#. Copy the contents of `bookmarklet.js` into the URL field of a new browser bookmark.
-#. Click on the bookmark when you're on a page you want to inspect.
+1. Copy the contents of `bookmarklet.js` into the URL field of a new browser bookmark.
+2. Click on the bookmark when you're on a page you want to inspect.
 
 ## Building it
 
